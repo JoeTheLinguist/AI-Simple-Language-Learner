@@ -16,9 +16,34 @@ def get_meaning(word, lexicon):
 		lexicon.update({word: [input("What is the meaning of this word?  ")]})
 	return lexicon
 
-def main_stuff(word, lexicon):
+def learn_word(word, lexicon):
 	while (word != "mebop"):
 		word = get_word()
 		lexicon = get_meaning(word, lexicon)
 		print(lexicon.get(word))
 	return lexicon
+
+def print_menu():
+	print("=============== MENU ===============")
+	print("| 1. Teach Word                    |")
+	print("| 2. Teach Phrase                  |")
+	print("| 3. Teach Sentence                |")
+	print("\n")
+	print("| 0. Exit                          |")
+	print("====================================\n")
+	print("Please select an option from the menu:", end=" ")
+
+def get_menu_input():
+	while (True):
+		selection == input()
+
+		if selection == 0:
+			break
+		elif selection == 1:
+			learn_word()
+		elif selection == 2:
+			learn_phrase()
+		elif selection == 3:
+			learn_sentence()
+		else:
+			print("Invalid option. Please try again:", end=" ") 		
